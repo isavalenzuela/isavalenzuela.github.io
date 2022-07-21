@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <body>
+    <div class="main-container background">
+      <header class="header"
+        ><h1
+          ><a class="header__text" onclick="location.href='index.html' ;"
+            >Easy Weather</a
+          ></h1
+        ></header
+      >
+      <div class="app" id="app">
+        <p class="app__text">Ingresa una ciudad</p>
+        <div class="app__div">
+          <div class="app__div__input">
+            <label id="city-label" for="city-search" class="city-search-label"
+              >⬇️</label
+            >
+            <input
+              type="text"
+              id="city-input"
+              name="city-search"
+              placeholder="¿Qué ciudad estás buscando?"
+            />
+          </div>
+          <br />
+          <button class="app__div__button" onclick="searchCityByInput() "
+            >Buscar</button
+          >
+        </div>
+      </div>
+      <div class="app--on-loading" id="app--on-loading">
+        <lottie-player
+          id="loading-img"
+          class="loading__img"
+          src="images/loading.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </div>
+  </body>
+</html>
