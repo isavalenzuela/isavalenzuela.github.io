@@ -15,22 +15,40 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <div class="main-container background">
-      <header class="header"
-        ><h1
-          ><a class="header__text" onclick="location.href='index.html' ;"
-            >Easy Weather</a
-          ></h1
-        ></header
-      >
+      <header class="header">
+        <h1>
+          <a class="header__text" onclick="location.href='index.html' ;"
+            >City Weather</a
+          >
+        </h1>
+      </header>
       <div class="app" id="app">
         <p class="app__text">Ingresa una ciudad</p>
+        <div class="app__animation">
+          <lottie-player
+          id="welcome-img"
+          class="welcome__img"
+          src="images/welcome.json"
+          background="transparent"
+          speed="1"
+          loop=false
+          autoplay
+        ></lottie-player>
+        </div>
         <div class="app__div">
           <div class="app__div__input">
             <label id="city-label" for="city-search" class="city-search-label"
-              >⬇️</label
+              ></label
             >
             <input
               type="text"

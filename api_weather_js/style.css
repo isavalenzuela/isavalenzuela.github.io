@@ -21,6 +21,11 @@ html {
     0 100px 80px rgba(0, 0, 0, 0.12);
   opacity: 1;
   transition: opacity 0.3s ease 0s;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .header__text:hover {
@@ -148,6 +153,13 @@ input[type="text"]:hover {
   margin: 0;
 }
 
+.welcome__img {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  margin: 0;
+}
+
 .app__div__button {
   border-radius: 10px;
   font-family: "Inter", sans-serif;
@@ -199,12 +211,22 @@ span[id="city"] {
   font-weight: 600;
 }
 
-.app__response__temp {
-  margin: 1rem;
-  gap: 15px;
+.app__response__temp, .app__response__feels, .app__response__min, .app__response__max{
+  margin: 0.5rem;
 }
 
-.app__response__wind {
-  margin: 1rem;
-  gap: 15px;
+.app__response__icon {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+span[id="weather-icon-desc"] {
+  color: gray;
+  font-style: italic;
+  text-transform: capitalize;
+  text-align: center;
 }

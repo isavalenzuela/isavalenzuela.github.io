@@ -18,24 +18,44 @@
         getWeatherFromStorage();
       };
     </script>
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <div class="main-container background">
       <header class="header"
         ><h1>
           <a class="header__text" onclick="location.href='index.html' ;"
-            >Easy Weather</a
+            >City Weather</a
           ></h1
         ></header
       >
       <div class="app">
+        <div class="app__response__icon">
+          
+          <img id="weather-icon" src="" alt="">
+          <p class="app__response__icon__desc"
+          ><span id="weather-icon-desc"></span>
+        </p>
+        </div>
         <p class="app__text">Este es el clima en: <span id="city"></span></p>
         <div class="app__response">
           <p class="app__response__temp"
             >La temperatura actual es: <span id="temp"></span> °C
           </p>
-          <p class="app__response__wind"
-            >La velocidad del viento es: <span id="wind"></span> Km/Hr
+          <p class="app__response__feels"
+            >La sensación térmica es de: <span id="feels_like"></span> °C
+          </p>
+          <p class="app__response__min"
+            >La mínima es: <span id="temp_min"></span> °C
+          </p>
+          <p class="app__response__max"
+            >La máxima es: <span id="temp_max"></span> °C
           </p>
         </div>
         <button
