@@ -2,7 +2,7 @@ const API_CITY_URL = "https://api.api-ninjas.com/v1/city?name=";
 
 const API_WEATHER_URL = "https://api.api-ninjas.com/v1/weather?city=";
 
-const API_NINJA_KEY = "";
+const API_NINJA_KEY = "74kc+gJrG2vC0/APCOXQJQ==gTUfnnID3aE9ydwJ";
 
 //normaliza input utilizando API de Ciudades
 function getCityByUserInput(userInput) {
