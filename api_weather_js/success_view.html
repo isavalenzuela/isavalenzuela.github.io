@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js"></script>
+    <script>
+      window.onload = function () {
+        getWeatherFromStorage();
+      };
+    </script>
+  </head>
+  <body>
+    <div class="main-container background">
+      <header class="header"
+        ><h1>
+          <a class="header__text" onclick="location.href='index.html' ;"
+            >Easy Weather</a
+          ></h1
+        ></header
+      >
+      <div class="app">
+        <p class="app__text">Este es el clima en: <span id="city"></span></p>
+        <div class="app__response">
+          <p class="app__response__temp"
+            >La temperatura actual es: <span id="temp"></span> °C
+          </p>
+          <p class="app__response__wind"
+            >La velocidad del viento es: <span id="wind"></span> Km/Hr
+          </p>
+        </div>
+        <button
+          class="app__div__button"
+          type="submit"
+          onclick="location.href='index.html' ;"
+          >Buscar otra más</button
+        >
+      </div>
+    </div>
+  </body>
+</html>
