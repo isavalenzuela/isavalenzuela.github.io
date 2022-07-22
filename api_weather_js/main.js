@@ -55,7 +55,8 @@ Parámetros: lat -> latitud, lon -> longitud.
 async function searchCityByInput() {
   //Se define variable userInput, obteniendo el valor en base a 
   const userInput = document.getElementById("city-input").value;
-
+  let cityResponse = "";
+  let weatherResponse = "";
   if (userInput.length <= 0) {
     alert("Ingresa una ciudad");
     return;
@@ -70,10 +71,16 @@ async function searchCityByInput() {
   const lottiePlayer = document.getElementById("loading-img");
   lottiePlayer.style.display = "block";
 
-  const cityResponse = await getCityByUserInput(userInput);
+  try {
+  cityResponse = await getCityByUserInput(userInput);
+  weatherResponse = await getWeatherByCity(cityResponse[0].latitude, cityResponse[0].longitude);
+  } catch (e) {
+    alert("La búsqueda no arrojó resultados");
+    console.log(`Error en servicios ${e}`)
+    return;
+  }
 
-  const weatherResponse = await getWeatherByCity(cityResponse[0].latitude, cityResponse[0].longitude);
-  console.log(weatherResponse)
+
   sessionStorage.setItem("weatherResponse", JSON.stringify(weatherResponse));
   sessionStorage.setItem("cityName", cityResponse[0].name);
   window.location.href = "success_view.html";

@@ -30,6 +30,7 @@ html {
 
 .header__text:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 body {
@@ -90,6 +91,7 @@ body {
 .app__text {
   color: rgba(0, 147, 203);
   margin: 10px;
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 2.5vh;
   display: flex;
@@ -106,7 +108,7 @@ body {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  margin: 50px 10px;
+  margin: 14px 10px 50px 10px;
   width: 40vw;
   box-sizing: border-box;
 }
@@ -154,8 +156,8 @@ input[type="text"]:hover {
 }
 
 .welcome__img {
-  width: 200px;
-  height: 200px;
+  width: 10rem;
+  height: 10rem;
   display: flex;
   margin: 0;
 }
@@ -168,7 +170,9 @@ input[type="text"]:hover {
   padding: 5px;
   border: 3px solid white;
   color: azure;
-  background-color: rgba(0, 147, 203, 0.8);
+  /* background-color: rgba(0, 147, 203, 0.8); */
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  cursor: pointer;
 }
 
 .app__div__button:hover {
@@ -191,6 +195,12 @@ input[type="text"]:hover {
 @media screen and (max-width: 350px) {
   .app__div__input {
     width: 100%;
+  }
+
+  .welcome__img {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
   }
 }
 
