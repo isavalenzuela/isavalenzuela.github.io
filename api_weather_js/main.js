@@ -77,6 +77,7 @@ async function searchCityByInput() {
   } catch (e) {
     alert("La búsqueda no arrojó resultados");
     console.log(`Error en servicios ${e}`)
+    window.location.href = "index.html"
     return;
   }
 
